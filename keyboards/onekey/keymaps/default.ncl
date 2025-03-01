@@ -33,9 +33,27 @@ let my_playback_tap_dance = td.make 200 [
 # The following keycode is a hold-tap, since it has a tap and a hold portion
 # Important: All hold-taps need to have a behavior bound with `hold.reg.behavior`
 
-let ctrl_if_held_and_space_if_tapped = 
+let rctrl_if_held_and_space_if_tapped = 
   tap.reg.kc.SPC
-  & hold.reg.mod.lctl
+  & hold.reg.mod.rctl
+  & hold.reg.behavior {
+    timeout_ms = 300
+    # This will resolve as a hold after 300ms regardless of other keys pressed.
+    # However, if released before the 300ms is up, it will resolve as a tap.
+  }
+in
+let ralt_if_held_and_bspace_if_tapped = 
+  tap.reg.kc.BSPC
+  & hold.reg.mod.ralt
+  & hold.reg.behavior {
+    timeout_ms = 300
+    # This will resolve as a hold after 300ms regardless of other keys pressed.
+    # However, if released before the 300ms is up, it will resolve as a tap.
+  }
+in
+let sys_if_held_and_enter_if_tapped = 
+  tap.reg.kc.ENTER
+  & hold.reg.mod.rgui
   & hold.reg.behavior {
     timeout_ms = 300
     # This will resolve as a hold after 300ms regardless of other keys pressed.
@@ -47,7 +65,9 @@ in
 {
   layers = [
     [
-      kc.ENTER
+      #kc.ENTER,
+
+      rctrl_if_held_and_space_if_tapped, ralt_if_held_and_bspace_if_tapped, sys_if_held_and_enter_if_tapped
     ]
   ]
   # virtual_keys = [
