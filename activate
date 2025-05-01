@@ -1,0 +1,4 @@
+# Get the directory of the script being sourced
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+alias fak="python $SCRIPT_DIR/fak.py"
