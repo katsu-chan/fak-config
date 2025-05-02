@@ -43,16 +43,40 @@ let TTTT = tap.trans & hold.trans in
 #   }
 # in
 
+# XXX: <AI generated code>
+
+# Create a curried function to generate tapdances with a fixed timeout
+# and exactly two keycodes (no brackets needed)
+let make_td = fun timeout_ms ->
+  fun kc1 kc2 -> td.make timeout_ms [kc1, kc2]
+in
+
+# Create tapdance generators with specific timeouts
+# let td_200ms = make_td 200 in
+# let td_150ms = make_td 150 in
+
+let tdm = make_td 200 in
+
+# Use the generators to create tapdances (no brackets needed)
+# let TD1, TD2 = 
+#   td_200ms kc.A kc.B,
+#   td_200ms kc.C kc.D
+# in
+
+# Example with different timing
+# let FAST_TD, SLOW_TD = 
+#   td_150ms kc.E kc.F,
+#   make_td 300 kc.H kc.I
+# in
+
+# XXX: </AI generated code>
+
                                     #200ms = 300bpm
-let spc_dot_comma_tapdance = td.make 200 [
-  kc.SPC, kc.DOT, kc.COMM,
-] in
+let spc_dot_comma_tapdance = tdm kc.SPC kc.DOT in
 
 let SDCT = spc_dot_comma_tapdance in
 
-let bspc_del_tapdance = td.make 200 [
-  kc.BSPC, kc.DEL,
-] in
+let bspc_del_tapdance = tdm kc.BSPC kc.DEL in
 
 let BDT = bspc_del_tapdance in
 
