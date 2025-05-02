@@ -22,13 +22,13 @@ let { CH552T, .. } = import "fak/mcus.ncl" in
     let R = RowToColKey in
     [
       # Q/Q,   W/W,   F/E,   P/R,   G/T,
-      R 0 0, R 0 2, R 1 0, R 1 2, R 2 0,
+      M 0 0, M 0 2, M 1 0, M 1 2, M 2 0,
       # A/A,   R/S,   S/D,   T/F,   D/G,
       # Z/Z,   X/X,   C/C,   V/V,   B/B,
 
-                           R 2 1, R 2 2, R 2 3,
+                           M 2 1, M 2 2, M 2 3,
                            #Ctrl,   Alt,    Fn
 
-      R 0 1, R 0 3, R 1 1, R 1 3
+      M 0 1, M 0 3, M 1 1, M 1 3
     ]
 }
