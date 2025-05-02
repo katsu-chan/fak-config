@@ -50,6 +50,13 @@ let spc_dot_comma_tapdance = td.make 200 [
 
 let SDCT = spc_dot_comma_tapdance in
 
+let bspc_del_tapdance = td.make 200 [
+  kc.BSPC, kc.DEL,
+] in
+
+let BDT = bspc_del_tapdance in
+
+
 # Keymap definition
 {
   # virtual_keys = [
@@ -63,7 +70,7 @@ let SDCT = spc_dot_comma_tapdance in
     layers = [
       [
         XXXX, XXXX, XXXX, XXXX, XXXX,
-                    XXXX, SDCT, XXXX,
+                     BDT, SDCT, XXXX,
 
         XXXX, XXXX, XXXX, XXXX
       ]
