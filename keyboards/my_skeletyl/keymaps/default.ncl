@@ -44,11 +44,11 @@ let TTTT = tap.trans & hold.trans in
 # in
 
                                     #200ms = 300bpm
-let scp_comma_dot_tapdance = td.make 200 [
-  kc.SPC, kc.COMM, kc.DOT,
+let spc_dot_comma_tapdance = td.make 200 [
+  kc.SPC, kc.DOT, kc.COMM,
 ] in
 
-let SCDT = scp_comma_dot_tapdance in
+let SDCT = spc_dot_comma_tapdance in
 
 # Keymap definition
 {
@@ -63,7 +63,7 @@ let SCDT = scp_comma_dot_tapdance in
     layers = [
       [
         XXXX, XXXX, XXXX, XXXX, XXXX,
-                    XXXX, SCDT, XXXX,
+                    XXXX, SDCT, XXXX,
 
         XXXX, XXXX, XXXX, XXXX
       ]
