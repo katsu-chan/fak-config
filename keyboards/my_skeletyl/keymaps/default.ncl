@@ -93,7 +93,7 @@ let BDT = bspc_del_tapdance in
 
     layers = [
       [
-        XXXX, XXXX, XXXX, XXXX, XXXX,
+        kc.A, kc.R, kc.S, kc.T, kc.D,
                      BDT, SDCT, XXXX,
 
         XXXX, XXXX, XXXX, XXXX
