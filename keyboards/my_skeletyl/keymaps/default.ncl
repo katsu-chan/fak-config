@@ -6,6 +6,8 @@ let md = hold.reg.mod in
 let me = tap.custom.media in
 let XXXX = tap.none & hold.none in
 let TTTT = tap.trans & hold.trans in
+let DF = tap.layer.DF in
+let TG = tap.layer.TG in
 
 # "cu" for custom keys. This is just a name, so it can be whatever you want.
 # let cu = {
@@ -137,10 +139,10 @@ let BDT = bspc_del_tapdance in
                           XXXX, XXXX, XXXX,            XXXX, XXXX, XXXX,
       ],
       [ # L7 nav
-        kc.A, XXXX          , XXXX          , XXXX, XXXX,                    XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, tap.layer.DF 1, tap.layer.DF 0, XXXX, XXXX,                    XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX          , XXXX          , XXXX, XXXX,                    XXXX, XXXX, XXXX, XXXX, XXXX,
-                                    XXXX, tap.layer.TG 2, XXXX,        XXXX, XXXX, XXXX,
+        kc.A, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, DF 1, DF 0, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+                          XXXX, TG 2, XXXX,            XXXX, XXXX, XXXX,
       ],
     ]
 
