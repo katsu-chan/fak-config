@@ -2,6 +2,7 @@ let { tap, hold, td, combo, .. } = import "fak/keycode.ncl" in
 
 # We alias commonly used stuff, so we don't end up repeating them over and over.
 let kc = tap.reg.kc in
+let md = hold.reg.mod in
 let me = tap.custom.media in
 let XXXX = tap.none & hold.none in
 let TTTT = tap.trans & hold.trans in
@@ -94,52 +95,52 @@ let BDT = bspc_del_tapdance in
 
     layers = [
       [ # L0 colemak
-        kc.Q, kc.W, kc.F, kc.P, kc.G,
-        kc.A, kc.R, kc.S, kc.T, kc.D,
-        kc.Z, kc.X, kc.C, kc.V, kc.B,
-                           BDT, SDCT, hold.reg.mod.lsft,
+        kc.Q, kc.W, kc.F, kc.P, kc.G,                        kc.J, kc.L, kc.U, kc.Y, kc.SCLN,
+        kc.A, kc.R, kc.S, kc.T, kc.D,                        kc.H, kc.N, kc.E, kc.I, kc.O,
+        kc.Z, kc.X, kc.C, kc.V, kc.B,                        kc.K, kc.M, kc.COMM, kc.DOT, kc.SLSH,
+                           BDT, SDCT, hold.reg.mod.lsft, md.lgui, md.lalt, md.rctl,
       ],
       [ #L1 qwerty
-        kc.Q, kc.W, kc.E, kc.R, kc.T,
-        kc.A, kc.S, kc.D, kc.F, kc.G,
-        kc.Z, kc.X, kc.C, kc.V, kc.B,
-                            BDT, SDCT, hold.reg.mod.lsft,
+        kc.Q, kc.W, kc.E, kc.R, kc.T,                        kc.Y, kc.U, kc.I, kc.O, kc.P,
+        kc.A, kc.S, kc.D, kc.F, kc.G,                        kc.H, kc.J, kc.K, kc.L, kc.SCLN,
+        kc.Z, kc.X, kc.C, kc.V, kc.B,                        kc.N, kc.M, kc.COMM, kc.DOT, kc.SLSH,
+                           BDT, SDCT, hold.reg.mod.lsft, md.lgui, md.lalt, md.rctl,
       ],
       [ #L2 osu
-        XXXX, XXXX, XXXX, XXXX, XXXX,
-         BDT, XXXX, XXXX, XXXX, XXXX, 
-        XXXX, XXXX, XXXX, XXXX, XXXX, 
-                            kc.UP, XXXX, kc.RIGHT,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+         BDT, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+                         kc.UP, XXXX, kc.RIGHT,        XXXX, XXXX, XXXX,
       ],
       [
-        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX, 
-        XXXX, XXXX, XXXX, XXXX, XXXX, 
-                          XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+                          XXXX, XXXX, XXXX,            XXXX, XXXX, XXXX,
       ],
       [
-        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX, 
-        XXXX, XXXX, XXXX, XXXX, XXXX, 
-                          XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+                          XXXX, XXXX, XXXX,            XXXX, XXXX, XXXX,
       ],
       [
-        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX, 
-        XXXX, XXXX, XXXX, XXXX, XXXX, 
-                          XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+                          XXXX, XXXX, XXXX,            XXXX, XXXX, XXXX,
       ],
       [
-        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX, 
-        XXXX, XXXX, XXXX, XXXX, XXXX, 
-                          XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+                          XXXX, XXXX, XXXX,            XXXX, XXXX, XXXX,
       ],
       [ # L7 nav
-        kc.A, XXXX          , XXXX          , XXXX, XXXX,
-        XXXX, tap.layer.DF 1, tap.layer.DF 0, XXXX, XXXX,
-        XXXX, XXXX          , XXXX          , XXXX, XXXX,
-                           XXXX, tap.layer.TG 2, XXXX,
+        kc.A, XXXX          , XXXX          , XXXX, XXXX,                    XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, tap.layer.DF 1, tap.layer.DF 0, XXXX, XXXX,                    XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX          , XXXX          , XXXX, XXXX,                    XXXX, XXXX, XXXX, XXXX, XXXX,
+                                    XXXX, tap.layer.TG 2, XXXX,        XXXX, XXXX, XXXX,
       ],
     ]
 
