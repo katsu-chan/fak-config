@@ -93,12 +93,54 @@ let BDT = bspc_del_tapdance in
   # ],
 
     layers = [
-      [
+      [ # L0 colemak
+        kc.Q, kc.W, kc.F, kc.P, kc.G,
         kc.A, kc.R, kc.S, kc.T, kc.D,
-                     BDT, SDCT, XXXX,
-
-        XXXX, XXXX, XXXX, XXXX
-      ]
+        kc.Z, kc.X, kc.C, kc.V, kc.B,
+                           BDT, SDCT, hold.reg.mod.lsft,
+      ],
+      [ #L1 qwerty
+        kc.Q, kc.W, kc.E, kc.R, kc.T,
+        kc.A, kc.S, kc.D, kc.F, kc.G,
+        kc.Z, kc.X, kc.C, kc.V, kc.B,
+                            BDT, SDCT, hold.reg.mod.lsft,
+      ],
+      [ #L2 osu
+        XXXX, XXXX, XXXX, XXXX, XXXX,
+         BDT, XXXX, XXXX, XXXX, XXXX, 
+        XXXX, XXXX, XXXX, XXXX, XXXX, 
+                            kc.UP, XXXX, kc.RIGHT,
+      ],
+      [
+        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX, 
+        XXXX, XXXX, XXXX, XXXX, XXXX, 
+                          XXXX, XXXX, XXXX,
+      ],
+      [
+        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX, 
+        XXXX, XXXX, XXXX, XXXX, XXXX, 
+                          XXXX, XXXX, XXXX,
+      ],
+      [
+        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX, 
+        XXXX, XXXX, XXXX, XXXX, XXXX, 
+                          XXXX, XXXX, XXXX,
+      ],
+      [
+        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX, 
+        XXXX, XXXX, XXXX, XXXX, XXXX, 
+                          XXXX, XXXX, XXXX,
+      ],
+      [ # L7 nav
+        kc.A, XXXX          , XXXX          , XXXX, XXXX,
+        XXXX, tap.layer.DF 1, tap.layer.DF 0, XXXX, XXXX,
+        XXXX, XXXX          , XXXX          , XXXX, XXXX,
+                           XXXX, tap.layer.TG 2, XXXX,
+      ],
     ]
 
   # layers = [
