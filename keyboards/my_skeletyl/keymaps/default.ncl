@@ -79,11 +79,17 @@ let spc_dot_comma_tapdance = td.make 200 [kc.SPC & hold.reg.mod.lalt & hold.reg.
 
 let SDCT = spc_dot_comma_tapdance in
 
+
 let bspc_del_tapdance = td.make 200 [kc.BSPC & hold.reg.mod.lctl & hold.reg.behavior { timeout_ms = 300 }, kc.DEL & hold.reg.layer 7 & hold.reg.behavior { timeout_ms = 300 }] in
 # let bspc_del_tapdance = tdm kc.BSPC & hold.reg.mod.lctl & hold.reg.behavior { timeout_ms = 300 } kc.DEL & hold.reg.layer 1 & hold.reg.behavior { timeout_ms = 300 } in
 
 let BDT = bspc_del_tapdance in
 
+let super_nav_td = td.make 200 [tap.sticky.layer 7, md.lgui] in
+
+# let SNTD = super_nav_td in
+
+let SNTD = tap.sticky.layer 7 & md.lgui & hold.reg.behavior {timeout_ms=150} in
 
 # Keymap definition
 {
@@ -100,48 +106,48 @@ let BDT = bspc_del_tapdance in
         kc.Q, kc.W, kc.F, kc.P, kc.G,                        kc.J, kc.L, kc.U, kc.Y, kc.SCLN,
         kc.A, kc.R, kc.S, kc.T, kc.D,                        kc.H, kc.N, kc.E, kc.I, kc.O,
         kc.Z, kc.X, kc.C, kc.V, kc.B,                        kc.K, kc.M, kc.COMM, kc.DOT, kc.SLSH,
-                           BDT, SDCT, hold.reg.mod.lsft, md.lgui, md.lalt, md.rctl,
+                           BDT, md.lalt, hold.reg.mod.lsft, SNTD, SDCT, md.rctl,
       ],
       [ #L1 qwerty
         kc.Q, kc.W, kc.E, kc.R, kc.T,                        kc.Y, kc.U, kc.I, kc.O, kc.P,
         kc.A, kc.S, kc.D, kc.F, kc.G,                        kc.H, kc.J, kc.K, kc.L, kc.SCLN,
         kc.Z, kc.X, kc.C, kc.V, kc.B,                        kc.N, kc.M, kc.COMM, kc.DOT, kc.SLSH,
-                           BDT, SDCT, hold.reg.mod.lsft, md.lgui, md.lalt, md.rctl,
+                           BDT, md.lalt, hold.reg.mod.lsft, SNTD, SDCT, md.rctl,
       ],
       [ #L2 osu
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, kc.UP, XXXX, kc.DOWN, XXXX,
+         BDT, md.lsft, XXXX, XXXX, XXXX,                        XXXX, kc.LEFT, XXXX, kc.RIGHT, XXXX,
         XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-         BDT, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-                         kc.UP, XXXX, kc.RIGHT,        XXXX, XXXX, XXXX,
+                         kc.LEFT, XXXX, kc.RIGHT,        md.lalt, kc.SPC, XXXX,
       ],
-      [
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-                          XXXX, XXXX, XXXX,            XXXX, XXXX, XXXX,
+      [ #L3 minecraft 
+        kc.N1, kc.N2, kc.N3, kc.N4, kc.N5,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        md.lctl, kc.Q, kc.W, kc.E, kc.T,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        md.lsft, kc.A, kc.S, kc.D, kc.F,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+                          XXXX, kc.SPC, kc.ESC,            XXXX, XXXX, DF 1,
       ],
-      [
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-                          XXXX, XXXX, XXXX,            XXXX, XXXX, XXXX,
+      [ # L4 3rd nav bruh
+        kc.ESC, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        kc.TAB, XXXX, XXXX, XXXX, XXXX,                        XXXX, kc.HOME, kc.PGDN, kc.PGUP, kc.END,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, kc.ENTER,
+                          XXXX, XXXX, XXXX,            SNTD, XXXX, XXXX,
       ],
-      [
+      [ # L5 nav nav.
         XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, kc.LEFT, kc.DOWN, kc.UP, kc.RIGHT,
         XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-                          XXXX, XXXX, XXXX,            XXXX, XXXX, XXXX,
+                          XXXX, XXXX, XXXX,            SNTD, XXXX, XXXX,
       ],
-      [
+      [ # L6 num
+        kc.N1, kc.N2, kc.N3, kc.N4, kc.N5,                        kc.N6, kc.N7, kc.N8, kc.N9, kc.N0,
+        kc.N6, kc.N7, kc.N8, kc.N9, kc.N0,                        XXXX, TG 6, XXXX, XXXX, XXXX,
         XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-                          XXXX, XXXX, XXXX,            XXXX, XXXX, XXXX,
+                          XXXX, XXXX, md.lsft,            md.lgui, XXXX, XXXX,
       ],
       [ # L7 nav
-        kc.A, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
-        XXXX, DF 1, DF 0, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
         XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, XXXX, XXXX, XXXX, XXXX,
+        TG 4, DF 1, DF 0, XXXX, XXXX,                        TG 5, TG 6, XXXX, XXXX, XXXX,
+        XXXX, XXXX, XXXX, XXXX, XXXX,                        XXXX, DF 3, XXXX, XXXX, XXXX,
                           XXXX, TG 2, XXXX,            XXXX, XXXX, XXXX,
       ],
     ]

@@ -33,7 +33,7 @@ let { CH552T, .. } = import "fak/mcus.ncl" in
       M 0 2, M 0 5, M 1 2, M 1 5, M 2 2,                      M 3 5, M 4 2, M 4 5, M 5 2, M 5 5,
       # Z/Z,   X/X,   C/C,   V/V,   B/B,                        K/N,   M/M,   ,/,    ./.,   ///,
 
-                           M 2 3, M 2 4, M 2 5,        M 3 0, M 3 1, M 3 2,
+                           M 2 3, M 2 4, M 2 5,        M 3 2, M 3 1, M 3 0,
                            #Ctrl,   Alt,    Fn,        Super,  LAlt, LCtrl,
     ]
 }
