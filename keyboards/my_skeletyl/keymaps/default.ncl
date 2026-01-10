@@ -80,7 +80,7 @@ let spc_dot_comma_tapdance = td.make 200 [kc.SPC & hold.reg.mod.lalt & hold.reg.
 let SDCT = spc_dot_comma_tapdance in
 
 
-let bspc_del_tapdance = td.make 200 [kc.BSPC & hold.reg.mod.lctl & hold.reg.behavior { timeout_ms = 300 }, kc.DEL & hold.reg.layer 7 & hold.reg.behavior { timeout_ms = 300 }] in
+let bspc_del_tapdance = td.make 300 [kc.BSPC & hold.reg.mod.lctl & hold.reg.behavior { timeout_ms = 300 }, kc.DEL & hold.reg.layer 7 & hold.reg.behavior { timeout_ms = 300 }] in
 # let bspc_del_tapdance = tdm kc.BSPC & hold.reg.mod.lctl & hold.reg.behavior { timeout_ms = 300 } kc.DEL & hold.reg.layer 1 & hold.reg.behavior { timeout_ms = 300 } in
 
 let BDT = bspc_del_tapdance in
@@ -89,7 +89,7 @@ let super_nav_td = td.make 200 [tap.sticky.layer 7, md.lgui] in
 
 # let SNTD = super_nav_td in
 
-let SNTD = tap.sticky.layer 7 & md.lgui & hold.reg.behavior {timeout_ms=150} in
+let SNTD = tap.sticky.layer 7 & md.lgui & hold.reg.behavior {timeout_ms=200} in
 
 # Keymap definition
 {
