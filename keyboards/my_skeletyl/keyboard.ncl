@@ -4,7 +4,7 @@ let { CH552T, CH552G, .. } = import "fak/mcus.ncl" in
 let side_central = {
   mcu = CH552T,
   matrix = {
-    cols = [32, 33, 34],
+    cols = [33, 34, 35],
     rows = [10, 11, 14, 15, 16, 17], 
   },
   split.channel = CH552T.features.uart_30_31
