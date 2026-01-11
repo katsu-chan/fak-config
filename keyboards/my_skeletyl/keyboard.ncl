@@ -1,8 +1,8 @@
 let { DirectPinKey, ColToRowKey, PeripheralSideKey, SoftSerialPin, RowToColKey, .. } = import "fak/keyboard.ncl" in
-let { CH552T, .. } = import "fak/mcus.ncl" in
+let { CH552G, .. } = import "fak/mcus.ncl" in
 
 {
-  mcu = CH552T,
+  mcu = CH552G,
   matrix = {
     cols = [30, 31, 32, 33, 34, 35],
     rows = [10, 11, 14, 15, 16, 17], 
