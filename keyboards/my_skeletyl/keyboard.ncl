@@ -16,7 +16,7 @@ let side_periph = {
     cols = [32, 33, 34],
     rows = [14, 15, 16],
   },
-  split.channel = CH552G.features.uart_30_31
+  split.channel = CH552G.features.uart_30_31,
   keys =
     let C = ColToRowKey in
     let R = RowToColKey in
