@@ -7,7 +7,7 @@ let side_central = {
     cols = [33, 34, 35],
     rows = [10, 11, 14, 15, 16, 17], 
   },
-  split.channel = CH552T.features.uart_30_31
+  split.channel = CH552T.features.uart_12_13
 } in
 
 let side_periph = {
