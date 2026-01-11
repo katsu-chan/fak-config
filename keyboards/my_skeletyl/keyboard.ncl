@@ -13,15 +13,16 @@ let side_central = {
 let side_periph = {
   mcu = CH552G,
   matrix = {
-    cols = [32, 33, 34],
+    cols = [10, 33, 34],
     rows = [14, 15, 16],
   },
   split.channel = CH552G.features.uart_30_31,
   keys =
     let C = ColToRowKey in
     let R = RowToColKey in
+    let D = DirectPinKey in
     [
-                    R 0 0, C 1 0, R 1 0, C 2 0, R 2 0,
+                     D 32, C 1 0, R 1 0, C 2 0, R 2 0,
       #               J/Y,   L/U,   U/I,   Y/O,   :/P,
        
                     R 0 1, C 1 1, R 1 1, C 2 1, R 2 1,
